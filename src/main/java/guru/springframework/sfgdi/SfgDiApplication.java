@@ -17,9 +17,8 @@ public class SfgDiApplication {
 		MyController myController = (MyController) ctx.getBean("myController");
 		//MyController myController = new MyController(); What is the differance?
 
-		String greetings = myController.sayHello();
-
-		System.out.println(greetings);
+		System.out.println("Primary Beam");
+		System.out.println(myController.sayHello());
 
 		System.out.println("----------- Property");
 
