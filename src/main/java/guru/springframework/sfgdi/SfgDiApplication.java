@@ -1,9 +1,6 @@
 package guru.springframework.sfgdi;
 
-import guru.springframework.sfgdi.Controllers.ConstructorInjectedController;
-import guru.springframework.sfgdi.Controllers.MyController;
-import guru.springframework.sfgdi.Controllers.PropertyInjectedController;
-import guru.springframework.sfgdi.Controllers.SetterInjectedController;
+import guru.springframework.sfgdi.Controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +13,9 @@ public class SfgDiApplication {
 
 		MyController myController = (MyController) ctx.getBean("myController");
 		//MyController myController = new MyController(); What is the differance?
+
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		System.out.println("Primary Beam");
 		System.out.println(myController.sayHello());
