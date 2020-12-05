@@ -11,10 +11,12 @@ public class GreetingServiceFactory {
 
     public GreetingService createGreetingService(String lang){
         switch (lang){
-            case "EN":
+            case "en":
                 return new PrimaryGreetingService(greetingRepository);
-            case "ES":
-                return new I18nEnglishGreetingService(greetingRepository);
+            case "es":
+                return new PrimarySpanishGreetingService(greetingRepository);
+            case "de":
+                return new PrimaryGermanGreetingService(greetingRepository);
             default:
                 return new PrimaryGreetingService(greetingRepository);
         }
