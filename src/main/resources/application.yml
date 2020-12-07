@@ -2,4 +2,13 @@ guru:
   jms:
     username: JMS Username
     password: somepass
-    url: SomeUrl
+    dbUrl: SomeUrl
+
+---
+spring:
+  profiles: de
+guru:
+  jms:
+    username: JMS Username--IN-GERMAN
+    password: somepass
+    dbUrl: SomeUrl
